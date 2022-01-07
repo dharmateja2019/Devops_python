@@ -34,7 +34,7 @@ jobs:
     - name: Check docker installed or not
       run: docker run hello-world
     - name: Push to docker hub
-      uses: opspresso/action-docker@v0.3.9
+      uses: docker/build-push-action@v1
       with:
             username: ${{ secrets.DOCKERHUB_USERNAME }}
             password: ${{ secrets.DOCKERHUB_PASSWORD }}
