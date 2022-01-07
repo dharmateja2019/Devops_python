@@ -1,4 +1,4 @@
-FROM python:3.10.0a4-buster
+FROM python
 COPY . /app
 WORKDIR /app
 COPY req.txt .
