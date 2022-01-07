@@ -28,10 +28,10 @@ jobs:
         pytest test.py
     - name: Check docker installed or not
       run: docker run hello-world
-    - name: Push to docker hub
-      uses: docker/build-push-action@v1
+    - name: Build and Push Docker Image
+      uses: mr-smithers-excellent/docker-build-push@v4
       with:
-            username: ${{ secrets.DOCKERHUB_USERNAME }}
-            password: ${{ secrets.DOCKERHUB_PASSWORD }}
-            registry: teja1521/dev_python
-            tag_with_ref: true
+        image: teja1521/dev_python
+        registry: docker.io
+        username: ${{ secrets.DOCKERHUB_USERNAME }}
+        password: ${{ secrets.DOCKERHUB_PASSWORD }}
