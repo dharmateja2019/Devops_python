@@ -39,3 +39,5 @@ jobs:
             username: ${{ secrets.DOCKERHUB_USERNAME }}
             password: ${{ secrets.DOCKERHUB_PASSWORD }}
             registry: teja1521/dev_python
+            tag_with_sha: true
+            tag_with_ref: true
